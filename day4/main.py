@@ -49,8 +49,7 @@ def is_valid_field(key, value):
 
 
 def is_valid_passport(passport):
-    if not passport.count("byr") == passport.count("iyr") == passport.count("eyr") == passport.count(
-            "hgt") == passport.count("hcl") == passport.count("ecl") == passport.count("pid") == 1:
+    if not is_valid_task1(passport):
         return False
 
     values = passport.split(' ')
